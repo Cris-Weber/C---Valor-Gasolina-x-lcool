@@ -1,0 +1,33 @@
+class Program
+{
+    public static void Main(string[] args)
+    {
+        string op = "sim";
+        while (op.Equals("sim"))
+        {
+            Console.Write("\n Digite o valor do álcool:\n ");
+            double n = double.Parse(Console.ReadLine());
+            Console.Write(" \n Digite o valor do gasolina:\n ");
+            double i = double.Parse(Console.ReadLine());
+            double result = n / i;
+            Console.WriteLine("\n Resultado = {0}", result);
+
+            if (result < 0.70)
+            {
+                Console.WriteLine("\n VALE A PENA O ÁLCOOL");
+            }
+            else if (result > 0.70)
+            {
+                Console.WriteLine("\n VALE A PENA A GASOLINA ");
+            }
+            else
+            {
+                Console.WriteLine("\n TANTO FAZ ABASTECER COM UM OU OUTRO");
+            }
+
+            Console.Write("\n Deseja realizar um novo cálculo (sim/não): ");
+            op = Console.ReadLine().ToLower();
+        }
+        Console.WriteLine("\n Operação Encerrada!");
+    }
+}
